@@ -17,10 +17,10 @@
 <nav>
   <a href="#hero" class="nav-logo">Portfolio.</a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#projects">Project</a></li>
-    <li><a href="#notes"> Note</a></li>
+    <li><a href="#about"><span class="nav-index">01</span> About</a></li>
+    <li><a href="#gallery"><span class="nav-index">02</span> Gallery</a></li>
+    <li><a href="#projects"><span class="nav-index">03</span> Project</a></li>
+    <li><a href="#notes"><span class="nav-index">04</span> Note</a></li>
   </ul>
 </nav>
 
@@ -30,9 +30,9 @@
     <div class="hero-left">
       <div class="hero-eyebrow fade-in">Creative Developer</div>
       <h1 class="hero-name fade-in stagger-1">
-        Halo Adik-adik,<br>saya<span>Deedat Faros</span>
+        Hello,<br>I'm <span>Deedat Faros</span>
       </h1>
-      <p class="hero-title fade-in stagger-2">Just be have fun</p>
+      <p class="hero-title fade-in stagger-2">Designer · Developer · Creator</p>
       <a href="#about" class="hero-cta fade-in stagger-3">
         Explore Portfolio
         <span>→</span>
@@ -40,10 +40,13 @@
     </div>
     <div class="hero-right fade-in stagger-2">
       <div class="hero-card g1">
+        <div class="hero-card-glow"></div>
+        <div class="hero-card-rune">✦</div>
+        <div class="hero-card-stars">★★★★★</div>
         <div class="hero-card-accent">✦</div>
         <div class="hero-card-inner">
           <div class="hero-card-label">Current Role</div>
-          <div class="hero-card-role">Building anything<br>as long as there i love</div>
+          <div class="hero-card-role">Building beautiful<br>digital experiences</div>
         </div>
       </div>
     </div>
@@ -51,7 +54,7 @@
   <div class="hero-bg-text">P</div>
   <div class="hero-scroll">
     <div class="scroll-line"></div>
-    <span>scroll sini</span>
+    <span>Scroll</span>
   </div>
 </section>
 
@@ -59,26 +62,27 @@
 <section id="about">
   <div class="section-header fade-in">
     <span class="section-num">— 01</span>
-    <h2 class="section-title">Tentang<em> kulo</em></h2>
+    <h2 class="section-title">About <em>Me</em></h2>
     <span class="section-tag">Bio</span>
   </div>
   <div class="about-grid">
     <div>
       <div class="about-bio fade-in">
         <p>
-          Hola! Saya seorang <span class="about-highlight">Budak Korporat</span> yang punya ambisi. cuma males aja
+          Halo! Saya seorang <span class="about-highlight">Budak Korporat</span> yang punya ambisi.
         </p>
         <p>
           Dengan latar belakang di <span class="about-highlight">mana-mana</span>, saya senang mengeksplorasi persimpangan antara teknologi dan kreativitas.
         </p>
         <p>
-          Saya suka <span class="about-highlight">fotografi</span>, menulis catatan tentang ide-ide menarik, dan terus mengeksplorasi hal-hal baru.
+          Saya suka <span class="about-highlight">fotografi</span>, menulis catatan tentang ide-ide menarik, dan terus mengeksplorasi hal-hal baru di dunia digital.
         </p>
       </div>
       <div class="skills-row fade-in stagger-2">
+        <span class="skill-tag">Figma</span>
         <span class="skill-tag">UI/UX</span>
+        <span class="skill-tag">Python</span>
         <span class="skill-tag">Motion Design</span>
-        <span class="skill-tag">Worksheet</span>
       </div>
     </div>
     <div class="about-stats">
@@ -109,14 +113,16 @@
     <div class="gallery-grid">
       <div class="gallery-item g1 fade-in stagger-1">
         <div class="gallery-num">001</div>
-       <img src="Bromo.jpeg" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="gallery-placeholder">
+          <div class="gallery-icon"><span>🏙</span></div>
+          <div class="gallery-label">Urban Landscape</div>
         </div>
         <div class="gallery-overlay"></div>
       </div>
       <div class="gallery-item g2 fade-in stagger-2">
         <div class="gallery-num">002</div>
         <div class="gallery-placeholder">
-          <div class="gallery-icon">🎨</div>
+          <div class="gallery-icon"><span>🎨</span></div>
           <div class="gallery-label">Digital Art</div>
         </div>
         <div class="gallery-overlay"></div>
@@ -124,7 +130,7 @@
       <div class="gallery-item g3 fade-in stagger-3">
         <div class="gallery-num">003</div>
         <div class="gallery-placeholder">
-          <div class="gallery-icon">📸</div>
+          <div class="gallery-icon"><span>📸</span></div>
           <div class="gallery-label">Photography</div>
         </div>
         <div class="gallery-overlay"></div>
@@ -132,7 +138,7 @@
       <div class="gallery-item g4 fade-in stagger-1">
         <div class="gallery-num">004</div>
         <div class="gallery-placeholder">
-          <div class="gallery-icon">✏️</div>
+          <div class="gallery-icon"><span>✏️</span></div>
           <div class="gallery-label">Illustration</div>
         </div>
         <div class="gallery-overlay"></div>
@@ -140,7 +146,7 @@
       <div class="gallery-item g5 fade-in stagger-2">
         <div class="gallery-num">005</div>
         <div class="gallery-placeholder">
-          <div class="gallery-icon">🌿</div>
+          <div class="gallery-icon"><span>🌿</span></div>
           <div class="gallery-label">Nature</div>
         </div>
         <div class="gallery-overlay"></div>
@@ -286,12 +292,11 @@
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-copy">© 2025 Portfolio. Dibuat dengan kopi.</div>
-<div class="footer-links">
-  <a href="https://github.com/MAMAGHUF2ON" target="_blank">GitHub</a>
-  <a href="https://www.instagram.com/kynikospath/" target="_blank">Instagram</a>
-  <a href="https://www.linkedin.com/in/muhammad-deedat-faros-36aa69368/" target="_blank">LinkedIn</a>
-  <a href="mailto:emailkamu@gmail.com" target="_blank">Email</a>
-</div>
+  <div class="footer-links">
+    <a href="#">GitHub</a>
+    <a href="#">Instagram</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Email</a>
   </div>
 </footer>
 
