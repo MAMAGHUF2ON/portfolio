@@ -324,3 +324,11 @@ function typeWriter() {
   }
 }
 setTimeout(typeWriter, 1200);
+/* ══ FALLBACK: pastikan semua reveal visible ══ */
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+      el.classList.add('visible');
+    });
+  }, 2000);
+});
