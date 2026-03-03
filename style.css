@@ -816,6 +816,8 @@ footer::after {
   max-width: 100%;
   margin: 0;
   padding: 0;
+  position: relative;
+  z-index: 1;
 }
 .section-dark > div { max-width: 1200px; margin: 0 auto; padding: 8rem 4rem; }
 
