@@ -86,7 +86,7 @@ body {
 #bgCanvas {
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
 }
 
@@ -476,13 +476,6 @@ nav::after {
 }
 
 /* ── SECTIONS ── */
-section {
-  padding: 8rem 4rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
 
 .section-header {
   display: flex;
@@ -817,9 +810,19 @@ footer::after {
   margin: 0;
   padding: 0;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  isolation: isolate;
 }
 .section-dark > div { max-width: 1200px; margin: 0 auto; padding: 8rem 4rem; }
+
+section {
+  padding: 8rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+}
 
 /* ── SCROLL ANIMATIONS ── */
 .reveal {
