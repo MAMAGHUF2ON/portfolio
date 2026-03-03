@@ -8,45 +8,41 @@
 </head>
 <body>
 
-<!-- ══ LOADING SCREEN ══ -->
+<!-- LOADER -->
 <div id="loader">
   <div class="loader-logo">✦ Portfolio ✦</div>
   <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
-  <div class="loader-text" id="loaderText">Memasuki Dunia...</div>
+  <div class="loader-text" id="loaderTxt">Memasuki Dunia...</div>
 </div>
 
-<!-- ══ CANVAS BACKGROUND ══ -->
+<!-- CANVAS -->
 <canvas id="bgCanvas"></canvas>
 
-<!-- ══ CURSOR ══ -->
-<div class="cursor-dot"  id="cursorDot"></div>
+<!-- CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- ══ NAVBAR ══ -->
+<!-- NAVBAR -->
 <nav>
   <a href="#hero" class="nav-logo">Portfolio.</a>
   <ul class="nav-links">
-    <li><a href="#about"><span class="nav-index">01</span>About</a></li>
-    <li><a href="#gallery"><span class="nav-index">02</span>Gallery</a></li>
-    <li><a href="#projects"><span class="nav-index">03</span>Project</a></li>
-    <li><a href="#notes"><span class="nav-index">04</span>Note</a></li>
+    <li><a href="#about"><span class="nav-index">01</span> About</a></li>
+    <li><a href="#gallery"><span class="nav-index">02</span> Gallery</a></li>
+    <li><a href="#projects"><span class="nav-index">03</span> Project</a></li>
+    <li><a href="#notes"><span class="nav-index">04</span> Note</a></li>
   </ul>
 </nav>
 
-<!-- ══ HERO ══ -->
-<section id="hero" style="max-width:100%;padding:0;">
+<!-- HERO -->
+<section id="hero">
   <div class="hero-grid">
     <div class="hero-left">
-      <div class="hero-eyebrow" id="heroEyebrow">Creative Developer</div>
-      <h1 class="hero-name" id="heroName">
-        Hello,<br>I'm <span>Deedat Faros</span>
-      </h1>
+      <div class="hero-eyebrow">◆ Creative Developer ◆</div>
+      <h1 class="hero-name">Hello,<br>I'm <span>Deedat Faros</span></h1>
       <p class="hero-subtitle" id="heroSub">Designer · Developer · Creator</p>
-      <a href="#about" class="hero-cta" id="heroCta">
-        Jelajahi Portfolio <span style="font-size:1rem">→</span>
-      </a>
+      <a href="#about" class="hero-cta">Jelajahi Portfolio <span>→</span></a>
     </div>
-    <div class="hero-right" id="heroRight">
+    <div class="hero-right">
       <div class="hero-card" id="heroCard">
         <div class="hero-card-glow"></div>
         <div class="hero-card-rune">✦</div>
@@ -61,25 +57,25 @@
       </div>
     </div>
   </div>
-  <div class="hero-bg-text">D</div>
+  <div class="hero-bg-letter">D</div>
   <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
 </section>
 
-<!-- ══ ABOUT ══ -->
-<section id="about">
-  <div class="section-header reveal">
+<!-- ABOUT -->
+<section id="about" class="section-light">
+  <div class="section-header">
     <span class="section-num">— 01</span>
     <h2 class="section-title">About <em>Me</em></h2>
     <span class="section-tag">Bio</span>
   </div>
   <div class="about-grid">
     <div>
-      <div class="about-bio reveal d1">
-        <p>Halo! Saya seorang <span class="about-highlight">Budak Korporat</span> yang punya ambisi besar.</p>
-        <p>Dengan latar belakang di <span class="about-highlight">mana-mana</span>, saya senang mengeksplorasi persimpangan antara teknologi dan kreativitas.</p>
-        <p>Saya suka <span class="about-highlight">fotografi</span>, menulis catatan tentang ide-ide menarik, dan terus mengeksplorasi hal-hal baru di dunia digital.</p>
+      <div class="about-bio">
+        <p>Halo! Saya seorang <span class="hl">Budak Korporat</span> yang punya ambisi besar.</p>
+        <p>Dengan latar belakang di <span class="hl">mana-mana</span>, saya senang mengeksplorasi persimpangan antara teknologi dan kreativitas.</p>
+        <p>Saya suka <span class="hl">fotografi</span>, menulis catatan tentang ide-ide menarik, dan terus mengeksplorasi hal-hal baru di dunia digital.</p>
       </div>
-      <div class="skills-row reveal d2">
+      <div class="skills-row">
         <span class="skill-tag">Figma</span>
         <span class="skill-tag">UI/UX</span>
         <span class="skill-tag">Python</span>
@@ -88,76 +84,73 @@
       </div>
     </div>
     <div class="about-stats">
-      <div class="stat-item reveal d1"><div class="stat-num">+1</div><div class="stat-label">Projects Completed</div></div>
-      <div class="stat-item reveal d2"><div class="stat-num">3 yr</div><div class="stat-label">Experience</div></div>
-      <div class="stat-item reveal d3"><div class="stat-num">∞</div><div class="stat-label">Ideas to Explore</div></div>
+      <div class="stat-item"><div class="stat-num">+1</div><div class="stat-label">Projects Completed</div></div>
+      <div class="stat-item"><div class="stat-num">3 yr</div><div class="stat-label">Experience</div></div>
+      <div class="stat-item"><div class="stat-num">∞</div><div class="stat-label">Ideas to Explore</div></div>
     </div>
   </div>
 </section>
 
-<!-- ══ GALLERY ══ -->
-<div class="section-dark" id="gallery">
-  <div>
-    <div class="section-header reveal">
-      <span class="section-num">— 02</span>
-      <h2 class="section-title"><em>Gallery</em></h2>
-      <span class="section-tag">Visual Works</span>
+<!-- GALLERY -->
+<section id="gallery" class="section-dark">
+  <div class="section-header">
+    <span class="section-num">— 02</span>
+    <h2 class="section-title"><em>Gallery</em></h2>
+    <span class="section-tag">Visual Works</span>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item g1">
+      <div class="gallery-num">001</div>
+      <div class="gallery-placeholder">
+        <div class="gallery-icon"><span>🏙</span></div>
+        <div class="gallery-label">Urban Landscape</div>
+      </div>
+      <div class="gallery-overlay"></div>
     </div>
-    <div class="gallery-grid">
-      <div class="gallery-item g1 reveal d1">
-        <div class="gallery-num">001</div>
-        <div class="gallery-placeholder">
-          <div class="gallery-icon"><span>🏙</span></div>
-          <div class="gallery-label">Urban Landscape</div>
-        </div>
-        <div class="gallery-overlay"></div>
+    <div class="gallery-item g2">
+      <div class="gallery-num">002</div>
+      <div class="gallery-placeholder">
+        <div class="gallery-icon"><span>🎨</span></div>
+        <div class="gallery-label">Digital Art</div>
       </div>
-      <div class="gallery-item g2 reveal d2">
-        <div class="gallery-num">002</div>
-        <div class="gallery-placeholder">
-          <div class="gallery-icon"><span>🎨</span></div>
-          <div class="gallery-label">Digital Art</div>
-        </div>
-        <div class="gallery-overlay"></div>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item g3">
+      <div class="gallery-num">003</div>
+      <div class="gallery-placeholder">
+        <div class="gallery-icon"><span>📸</span></div>
+        <div class="gallery-label">Photography</div>
       </div>
-      <div class="gallery-item g3 reveal d3">
-        <div class="gallery-num">003</div>
-        <div class="gallery-placeholder">
-          <div class="gallery-icon"><span>📸</span></div>
-          <div class="gallery-label">Photography</div>
-        </div>
-        <div class="gallery-overlay"></div>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item g4">
+      <div class="gallery-num">004</div>
+      <div class="gallery-placeholder">
+        <div class="gallery-icon"><span>✏️</span></div>
+        <div class="gallery-label">Illustration</div>
       </div>
-      <div class="gallery-item g4 reveal d1">
-        <div class="gallery-num">004</div>
-        <div class="gallery-placeholder">
-          <div class="gallery-icon"><span>✏️</span></div>
-          <div class="gallery-label">Illustration</div>
-        </div>
-        <div class="gallery-overlay"></div>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item g5">
+      <div class="gallery-num">005</div>
+      <div class="gallery-placeholder">
+        <div class="gallery-icon"><span>🌿</span></div>
+        <div class="gallery-label">Nature</div>
       </div>
-      <div class="gallery-item g5 reveal d2">
-        <div class="gallery-num">005</div>
-        <div class="gallery-placeholder">
-          <div class="gallery-icon"><span>🌿</span></div>
-          <div class="gallery-label">Nature</div>
-        </div>
-        <div class="gallery-overlay"></div>
-      </div>
+      <div class="gallery-overlay"></div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ══ PROJECTS ══ -->
-<section id="projects">
-  <div class="section-header reveal">
+<!-- PROJECTS -->
+<section id="projects" class="section-light">
+  <div class="section-header">
     <span class="section-num">— 03</span>
     <h2 class="section-title">Selected <em>Projects</em></h2>
     <span class="section-tag">Work</span>
   </div>
   <div class="projects-list">
-    <div class="project-item reveal">
-      <div class="project-bg"></div>
+    <div class="project-item">
       <div class="project-num">001</div>
       <div class="project-content">
         <div class="project-name">Project Alpha</div>
@@ -167,8 +160,7 @@
       </div>
       <div class="project-arrow">↗</div>
     </div>
-    <div class="project-item reveal d1">
-      <div class="project-bg"></div>
+    <div class="project-item">
       <div class="project-num">002</div>
       <div class="project-content">
         <div class="project-name">Visual Studio</div>
@@ -178,8 +170,7 @@
       </div>
       <div class="project-arrow">↗</div>
     </div>
-    <div class="project-item reveal d2">
-      <div class="project-bg"></div>
+    <div class="project-item">
       <div class="project-num">003</div>
       <div class="project-content">
         <div class="project-name">Data Pulse</div>
@@ -192,63 +183,62 @@
   </div>
 </section>
 
-<!-- ══ NOTES ══ -->
-<div class="section-dark" id="notes">
-  <div>
-    <div class="section-header reveal">
-      <span class="section-num">— 04</span>
-      <h2 class="section-title">My <em>Notes</em></h2>
-      <span class="section-tag">Thoughts</span>
+<!-- NOTES -->
+<section id="notes" class="section-dark">
+  <div class="section-header">
+    <span class="section-num">— 04</span>
+    <h2 class="section-title">My <em>Notes</em></h2>
+    <span class="section-tag">Thoughts</span>
+  </div>
+  <div class="notes-grid">
+    <div class="note-card">
+      <div class="note-shimmer"></div>
+      <div class="note-date">Mar 2025</div>
+      <div class="note-title">Kenapa Desain yang Baik Terasa "Tidak Terlihat"</div>
+      <div class="note-excerpt">Ketika sebuah desain bekerja sempurna, pengguna tidak menyadari keberadaannya. Mereka hanya merasa nyaman dan tahu harus ke mana...</div>
+      <div class="note-footer"><span class="note-cat">Design</span><span class="note-read">3 min read</span></div>
     </div>
-    <div class="notes-grid">
-      <div class="note-card reveal d1">
-        <div class="note-card-shimmer"></div>
-        <div class="note-date">Mar 2025</div>
-        <div class="note-title">Kenapa Desain yang Baik Terasa "Tidak Terlihat"</div>
-        <div class="note-excerpt">Ketika sebuah desain bekerja sempurna, pengguna tidak menyadari keberadaannya. Mereka hanya merasa nyaman dan tahu harus ke mana...</div>
-        <div class="note-footer"><span class="note-cat">Design</span><span class="note-read">3 min read</span></div>
-      </div>
-      <div class="note-card reveal d2">
-        <div class="note-card-shimmer"></div>
-        <div class="note-date">Feb 2025</div>
-        <div class="note-title">Belajar dari Ketidaksempurnaan dalam Kode</div>
-        <div class="note-excerpt">Setiap bug adalah guru. Proses debugging bukan hanya tentang memperbaiki masalah, tapi tentang memahami cara berpikir sistem...</div>
-        <div class="note-footer"><span class="note-cat">Dev</span><span class="note-read">5 min read</span></div>
-      </div>
-      <div class="note-card reveal d3">
-        <div class="note-card-shimmer"></div>
-        <div class="note-date">Jan 2025</div>
-        <div class="note-title">Tentang Konsistensi dalam Berkarya</div>
-        <div class="note-excerpt">Bukan tentang selalu menghasilkan karya terbaik. Tapi tentang terus muncul, membuat sesuatu, dan meningkat sedikit demi sedikit...</div>
-        <div class="note-footer"><span class="note-cat">Creative</span><span class="note-read">4 min read</span></div>
-      </div>
-      <div class="note-card reveal d1">
-        <div class="note-card-shimmer"></div>
-        <div class="note-date">Dec 2024</div>
-        <div class="note-title">Typografi adalah Suara dari Sebuah Desain</div>
-        <div class="note-excerpt">Pilihan font yang tepat bisa mengubah seluruh mood sebuah karya. Typography bukan sekadar teks — ia adalah kepribadian...</div>
-        <div class="note-footer"><span class="note-cat">Design</span><span class="note-read">3 min read</span></div>
-      </div>
-      <div class="note-card reveal d2">
-        <div class="note-card-shimmer"></div>
-        <div class="note-date">Nov 2024</div>
-        <div class="note-title">Membangun Sesuatu Hanya untuk Belajar</div>
-        <div class="note-excerpt">Tidak semua proyek harus selesai atau dilaunching. Terkadang tujuan terbaik dari sebuah proyek adalah proses pembuatannya itu sendiri...</div>
-        <div class="note-footer"><span class="note-cat">Dev</span><span class="note-read">4 min read</span></div>
-      </div>
-      <div class="note-card reveal d3">
-        <div class="note-card-shimmer"></div>
-        <div class="note-date">Oct 2024</div>
-        <div class="note-title">Inspirasi Ada di Mana-Mana</div>
-        <div class="note-excerpt">Dari cara lampu lalu lintas berkedip, hingga pola ubin di trotoar — kreativitas bukan soal menunggu momen. Tapi soal melatih mata...</div>
-        <div class="note-footer"><span class="note-cat">Creative</span><span class="note-read">2 min read</span></div>
-      </div>
+    <div class="note-card">
+      <div class="note-shimmer"></div>
+      <div class="note-date">Feb 2025</div>
+      <div class="note-title">Belajar dari Ketidaksempurnaan dalam Kode</div>
+      <div class="note-excerpt">Setiap bug adalah guru. Proses debugging bukan hanya tentang memperbaiki masalah, tapi tentang memahami cara berpikir sistem...</div>
+      <div class="note-footer"><span class="note-cat">Dev</span><span class="note-read">5 min read</span></div>
+    </div>
+    <div class="note-card">
+      <div class="note-shimmer"></div>
+      <div class="note-date">Jan 2025</div>
+      <div class="note-title">Tentang Konsistensi dalam Berkarya</div>
+      <div class="note-excerpt">Bukan tentang selalu menghasilkan karya terbaik. Tapi tentang terus muncul, membuat sesuatu, dan meningkat sedikit demi sedikit...</div>
+      <div class="note-footer"><span class="note-cat">Creative</span><span class="note-read">4 min read</span></div>
+    </div>
+    <div class="note-card">
+      <div class="note-shimmer"></div>
+      <div class="note-date">Dec 2024</div>
+      <div class="note-title">Typografi adalah Suara dari Sebuah Desain</div>
+      <div class="note-excerpt">Pilihan font yang tepat bisa mengubah seluruh mood sebuah karya. Typography bukan sekadar teks — ia adalah kepribadian...</div>
+      <div class="note-footer"><span class="note-cat">Design</span><span class="note-read">3 min read</span></div>
+    </div>
+    <div class="note-card">
+      <div class="note-shimmer"></div>
+      <div class="note-date">Nov 2024</div>
+      <div class="note-title">Membangun Sesuatu Hanya untuk Belajar</div>
+      <div class="note-excerpt">Tidak semua proyek harus selesai. Terkadang tujuan terbaik dari sebuah proyek adalah proses pembuatannya itu sendiri...</div>
+      <div class="note-footer"><span class="note-cat">Dev</span><span class="note-read">4 min read</span></div>
+    </div>
+    <div class="note-card">
+      <div class="note-shimmer"></div>
+      <div class="note-date">Oct 2024</div>
+      <div class="note-title">Inspirasi Ada di Mana-Mana</div>
+      <div class="note-excerpt">Dari cara lampu lalu lintas berkedip hingga pola ubin di trotoar — kreativitas bukan soal menunggu momen. Tapi soal melatih mata...</div>
+      <div class="note-footer"><span class="note-cat">Creative</span><span class="note-read">2 min read</span></div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ══ FOOTER ══ -->
+<!-- FOOTER -->
 <footer>
+  <div class="footer-ornament">✦ ◆ ✦</div>
   <div class="footer-copy">© 2025 Deedat Faros. Dibuat dengan kopi & semangat.</div>
   <div class="footer-links">
     <a href="https://github.com/MAMAGHUF2ON" target="_blank">GitHub</a>
