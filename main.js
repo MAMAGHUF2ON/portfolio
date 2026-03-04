@@ -250,61 +250,6 @@ function drawAurora() {
   });
 }
 
-function drawMoon() {
-  const { x, y, r } = moon;
-  
-  // Outer glow halo
-  const halo = ctx.createRadialGradient(x, y, r * 0.8, x, y, r * 3);
-  halo.addColorStop(0,   'rgba(200,220,255,0.12)');
-  halo.addColorStop(0.4, 'rgba(160,180,255,0.05)');
-  halo.addColorStop(1,   'rgba(0,0,0,0)');
-  ctx.fillStyle = halo;
-  ctx.beginPath();
-  ctx.arc(x, y, r * 3, 0, Math.PI * 2);
-  ctx.fill();
-
-  // Moon body
-  const mg = ctx.createRadialGradient(x - r*0.25, y - r*0.25, r*0.05, x, y, r);
-  mg.addColorStop(0,   'rgba(240,245,255,0.95)');
-  mg.addColorStop(0.5, 'rgba(200,215,240,0.88)');
-  mg.addColorStop(1,   'rgba(140,160,210,0.6)');
-  ctx.fillStyle = mg;
-  ctx.beginPath();
-  ctx.arc(x, y, r, 0, Math.PI * 2);
-  ctx.fill();
-
-  // Moon shadow (phase)
-  ctx.save();
-  ctx.beginPath();
-  ctx.arc(x, y, r, 0, Math.PI * 2);
-  ctx.clip();
-  ctx.fillStyle = 'rgba(2,5,15,0.72)';
-  ctx.beginPath();
-  ctx.arc(x + r * 0.55, y, r * 1.1, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.restore();
-
-  // Surface craters (subtle)
-  [[x-r*0.2, y-r*0.15, r*0.08], [x+r*0.25, y+r*0.2, r*0.06], [x-r*0.3, y+r*0.28, r*0.05]].forEach(([cx,cy,cr]) => {
-    const cg = ctx.createRadialGradient(cx, cy, 0, cx, cy, cr);
-    cg.addColorStop(0, 'rgba(100,120,180,0.15)');
-    cg.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx.fillStyle = cg;
-    ctx.beginPath();
-    ctx.arc(cx, cy, cr, 0, Math.PI * 2);
-    ctx.fill();
-  });
-
-  // Teyvat eye (crescent mark like in game)
-  ctx.save();
-  ctx.globalAlpha = 0.08;
-  ctx.fillStyle = 'rgba(180,140,255,1)';
-  ctx.beginPath();
-  ctx.arc(x + r*0.05, y - r*0.05, r*0.35, 0, Math.PI*2);
-  ctx.fill();
-  ctx.globalAlpha = 1;
-  ctx.restore();
-}
 
 function drawStars() {
   stars.forEach(s => {
@@ -401,7 +346,6 @@ function frame() {
   drawSkyGradient();
   drawNebulae();
   drawMilkyWayCore();
-  drawAurora();
   drawMoon();
   drawStars();
   drawParticles();
