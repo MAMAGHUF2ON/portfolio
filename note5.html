@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Membangun Sesuatu Hanya untuk Belajar — Deedat Faros</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .note-page { max-width: 780px; margin: 0 auto; padding: 10rem 4rem 8rem; position: relative; z-index: 1; }
+  .note-back { display: inline-flex; align-items: center; gap: .6rem; font-family: 'Cinzel', serif; font-size: .58rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(200,160,60,.5); text-decoration: none; margin-bottom: 3rem; transition: color .3s; }
+  .note-back:hover { color: var(--gold2); }
+  .note-page-meta { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+  .note-page-date { font-family: 'Cinzel', serif; font-size: .52rem; letter-spacing: .25em; text-transform: uppercase; color: var(--sky); }
+  .note-page-cat { font-family: 'Cinzel', serif; font-size: .5rem; letter-spacing: .15em; text-transform: uppercase; color: rgba(200,160,60,.5); border: 1px solid rgba(200,160,60,.2); padding: .2rem .7rem; background: rgba(200,160,60,.05); }
+  .note-page-read { font-family: 'Cinzel', serif; font-size: .5rem; color: var(--muted); margin-left: auto; }
+  .note-page-title { font-family: 'Cinzel Decorative', serif; font-size: clamp(1.6rem, 3vw, 2.6rem); font-weight: 700; color: var(--white); line-height: 1.25; margin-bottom: 2.5rem; }
+  .note-page-divider { height: 1px; background: linear-gradient(to right, var(--gold), rgba(200,160,60,.2), transparent); margin-bottom: 3rem; position: relative; }
+  .note-page-divider::before { content: '◆'; position: absolute; left: 0; top: -7px; font-size: .46rem; color: var(--gold); }
+  .note-page-body { font-family: 'Lora', serif; font-size: 1.1rem; line-height: 2; color: rgba(168,188,208,.88); }
+  .note-page-body p { margin-bottom: 1.6rem; }
+  .note-page-body h2 { font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 600; color: var(--gold2); margin: 2.5rem 0 1rem; letter-spacing: .04em; }
+  .note-page-body blockquote { border-left: 2px solid var(--gold); padding: 1rem 1.5rem; margin: 2rem 0; background: rgba(200,160,60,.04); font-style: italic; color: var(--gold2); }
+  .note-page-body strong { color: var(--gold2); font-weight: 600; }
+  .note-page-footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(200,160,60,.15); display: flex; align-items: center; justify-content: space-between; }
+  .note-author-wrap { display: flex; align-items: center; gap: 1rem; }
+  .note-author-avatar { width: 42px; height: 42px; background: linear-gradient(135deg, var(--surface), var(--surface2)); border: 1px solid rgba(200,160,60,.3); clip-path: polygon(50% 0%,100% 50%,50% 100%,0% 50%); display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+  .note-author-name { font-family: 'Cinzel', serif; font-size: .62rem; color: var(--white); letter-spacing: .08em; }
+  .note-author-role { font-family: 'Lora', serif; font-size: .75rem; font-style: italic; color: var(--muted); margin-top: .2rem; }
+  .note-back-btn { display: inline-flex; align-items: center; gap: .7rem; padding: .7rem 1.8rem; font-family: 'Cinzel', serif; font-size: .58rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold2); border: 1px solid rgba(200,160,60,.3); text-decoration: none; background: rgba(200,160,60,.05); transition: all .3s; }
+  .note-back-btn:hover { border-color: rgba(200,160,60,.7); color: var(--gold3); }
+</style>
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav>
+  <a href="index.html" class="nav-logo">Portfolio.</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about"><span class="nav-index">01</span> About</a></li>
+    <li><a href="index.html#gallery"><span class="nav-index">02</span> Gallery</a></li>
+    <li><a href="index.html#projects"><span class="nav-index">03</span> Project</a></li>
+    <li><a href="index.html#notes"><span class="nav-index">04</span> Note</a></li>
+  </ul>
+</nav>
+<div class="note-page">
+  <a href="index.html#notes" class="note-back">← Kembali ke Notes</a>
+  <div class="note-page-meta">
+    <span class="note-page-date">Nov 2024</span>
+    <span class="note-page-cat">Dev</span>
+    <span class="note-page-read">4 min read</span>
+  </div>
+  <h1 class="note-page-title">Membangun Sesuatu Hanya untuk Belajar</h1>
+  <div class="note-page-divider"></div>
+  <div class="note-page-body">
+
+    <p>Tidak setiap proyek harus punya user. Tidak setiap kode harus di-deploy. Tidak setiap desain harus punya klien. Kadang, alasan terbaik untuk membuat sesuatu adalah karena kamu ingin tahu bisa atau tidak.</p>
+    <blockquote>"The best way to learn is to build something you actually care about."</blockquote>
+    <h2>Side Project sebagai Laboratorium</h2>
+    <p>Di tempat kerja atau kuliah, kamu dibatasi oleh requirement, timeline, dan ekspektasi orang lain. Tapi di side project pribadimu? Kamu bebas. Bebas mencoba teknologi baru, memecahkan masalah dengan cara yang belum pernah kamu coba, gagal tanpa konsekuensi.</p>
+    <p>Beberapa inovasi terbesar lahir dari seseorang yang <strong>iseng mencoba sesuatu</strong> tanpa tekanan untuk berhasil. Gmail, Slack, Instagram — semua dimulai sebagai side project.</p>
+    <h2>Proses Lebih Penting dari Hasil</h2>
+    <p>Saat kamu membangun sesuatu untuk belajar, kamu terbebas dari obsesi terhadap hasil akhir. Kamu bisa berhenti di tengah jalan kalau sudah mendapatkan pelajarannya. Kamu bisa pivot total. Kamu bisa mulai ulang dari nol.</p>
+    <p>Ini adalah privilege yang tidak banyak orang manfaatkan. Dan ironisnya, justru dari kebebasan inilah sering lahir <strong>hasil yang paling jujur dan inovatif</strong>.</p>
+    <h2>Mulai Tanpa Rencana Besar</h2>
+    <p>Tidak perlu pitch deck. Tidak perlu market research. Cukup satu pertanyaan: "Aku penasaran, bisa gak ya bikin ini?" Mulai dari sana. Sisanya akan mengikuti dengan sendirinya.</p>
+  </div>
+  <div class="note-page-footer">
+    <div class="note-author-wrap">
+      <div class="note-author-avatar">✦</div>
+      <div>
+        <div class="note-author-name">Deedat Faros</div>
+        <div class="note-author-role">Designer · Developer</div>
+      </div>
+    </div>
+    <a href="index.html#notes" class="note-back-btn">← Semua Notes</a>
+  </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
