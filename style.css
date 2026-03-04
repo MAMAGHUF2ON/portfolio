@@ -332,6 +332,32 @@ section.section-light { background: transparent; }
 .g4 { background: linear-gradient(160deg,#0e0702,#180e03,#200c00); }
 .g5 { background: linear-gradient(160deg,#030a06,#05120a,#081a10); }
 
+.gallery-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  z-index: 1;
+}
+.gallery-item:hover .gallery-img { transform: scale(1.06); }
+
+.gallery-caption {
+  position: absolute;
+  bottom: 1rem; left: 1.2rem;
+  font-family: 'Cinzel', serif;
+  font-size: .52rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(240,237,232,.85);
+  text-shadow: 0 2px 12px rgba(0,0,0,.8);
+  z-index: 5;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .4s, transform .4s;
+}
+.gallery-item:hover .gallery-caption { opacity: 1; transform: translateY(0); }
+
 /* ══════════════════════════════════════
    PROJECTS
 ══════════════════════════════════════ */
@@ -361,6 +387,8 @@ section.section-light { background: transparent; }
 ══════════════════════════════════════ */
 .notes-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; padding: 0 4rem; max-width: 1200px; margin: 0 auto; }
 .note-card {
+  display: block;
+  text-decoration: none;
   background: linear-gradient(160deg, var(--surface), var(--surface2));
   border: 1px solid rgba(200,160,60,.2); padding: 1.8rem;
   position: relative; overflow: hidden; cursor: pointer;
